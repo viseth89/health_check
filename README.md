@@ -35,7 +35,7 @@ if __name__ == "__main__":
 Part 2 ---————— Copy and Paste
 
 <VirtualHost *:80>
-                ServerName Put Ip Address Here
+                ServerName 198.211.107.74
                 ServerAdmin youemail@email.com
                 WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
                 <Directory /var/www/FlaskApp/FlaskApp/>
@@ -83,3 +83,13 @@ Host *
  AddKeysToAgent yes
  UseKeychain yes
  IdentityFile ~/.ssh/id_rsa
+
+
+
+ Command to fix db errors 
+
+ sudo chmod a+w file.db
+
+ sudo chmod a+w .
+
+ 
