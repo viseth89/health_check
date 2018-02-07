@@ -15,8 +15,7 @@ apt-get install git
 
 Initial Server Setup on Digital Ocean 14.x with Python 2.x ------
 
-
-sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install apache2 mysql-client mysql-server -y && sudo apt-get install libapache2-mod-wsgi && sudo a2enmod wsgi && cd /var/www && mkdir FlaskApp && cd FlaskApp && mkdir FlaskApp && cd FlaskApp && mkdir static templates && nano __init__.py && sudo apt-get update -y && sudo apt-get upgrade -y && apt-get install python-pip -y && pip install Flask && nano /etc/apache2/sites-available/FlaskApp.conf && sudo a2ensite FlaskApp && service apache2 reload && cd /var/www/FlaskApp && nano flaskapp.wsgi && service apache2 restart
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install git apache2 mysql-client mysql-server -y && sudo apt-get install libapache2-mod-wsgi && sudo a2enmod wsgi && cd /var/www && mkdir FlaskApp && cd FlaskApp && mkdir FlaskApp && cd FlaskApp && mkdir static templates && nano __init__.py && sudo apt-get update -y && sudo apt-get upgrade -y && apt-get install python-pip -y && pip install Flask && pip install flask_sqlalchemy && nano /etc/apache2/sites-available/FlaskApp.conf && sudo a2ensite FlaskApp && service apache2 reload && cd /var/www/FlaskApp && nano flaskapp.wsgi && service apache2 restart
 
 Part 1    ——— Copy and Paste
 
@@ -35,7 +34,7 @@ if __name__ == "__main__":
 Part 2 ---————— Copy and Paste
 
 <VirtualHost *:80>
-                ServerName 198.211.107.74
+                ServerName 165.227.205.126
                 ServerAdmin youemail@email.com
                 WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
                 <Directory /var/www/FlaskApp/FlaskApp/>
